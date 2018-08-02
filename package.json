@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "example-typescript",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~3.0.0",
+    "@types/jest": "~23.3.1",
+    "ts-jest": "~23.0.1",
+    "jest": "~23.4.2",
+    "jest-html-reporter": "~2.4.2"
+  },
+  "scripts": {
+    "test": "jest --env=node",
+    "test:w": "jest --env=node --watch"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/test/*.+(ts|tsx|js)"
+    ]
+  }
+}

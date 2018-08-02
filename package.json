@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "jest --env=node",
-    "test:w": "jest --env=node --watch"
+    "test:w": "jest --env=node --watch",
+    "test:wa": "jest --env=node --watchAll"
   },
   "jest": {
     "moduleFileExtensions": [

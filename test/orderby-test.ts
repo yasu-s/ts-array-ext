@@ -76,4 +76,37 @@ describe('Array.orderby', () => {
     expect(actual[2].id).toBe(3);
     expect(actual[3].id).toBe(2);
   });
+
+  it('sortKeys = { key:TestData.name, asc: true }', () => {
+    // execrise
+    const actual = testData.orderBy({ sortKey: 'name', asc: true });
+
+    // verify
+    expect(actual[0].name).toBe('Alex');
+    expect(actual[1].name).toBe('Bob');
+    expect(actual[2].name).toBe('Bob');
+    expect(actual[3].name).toBe('Char');
+  });
+
+  it('sortKeys = { key:TestData.name, asc: false }', () => {
+    // execrise
+    const actual = testData.orderBy({ sortKey: 'name', asc: false });
+
+    // verify
+    expect(actual[0].name).toBe('Char');
+    expect(actual[1].name).toBe('Bob');
+    expect(actual[2].name).toBe('Bob');
+    expect(actual[3].name).toBe('Alex');
+  });
+
+  it('sortKeys = { key:TestData.name, asc: true }, { key:TestData.id, asc: false }', () => {
+    // execrise
+    const actual = testData.orderBy({ sortKey: 'name', asc: true }, { sortKey: 'id', asc: false });
+
+    // verify
+    expect(actual[0].id).toBe(4);
+    expect(actual[1].id).toBe(3);
+    expect(actual[2].id).toBe(1);
+    expect(actual[3].id).toBe(2);
+  });
 });

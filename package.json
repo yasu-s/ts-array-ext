@@ -11,9 +11,9 @@
     "jest-html-reporter": "~2.4.2"
   },
   "scripts": {
-    "test": "jest --env=node",
+    "test": "jest --env=node --verbose",
     "test:w": "jest --env=node --watch",
-    "test:wa": "jest --env=node --watchAll"
+    "test:wa": "jest --env=node --watchAll --verbose"
   },
   "jest": {
     "moduleFileExtensions": [

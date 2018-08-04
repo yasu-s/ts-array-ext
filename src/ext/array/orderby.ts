@@ -11,6 +11,7 @@ type SortInfo<K> = {
 declare global {
   interface Array<T> {
     /**
+     * [拡張メソッド]
      * 指定したプロパティを元に昇順にソートします。
      * @param sortKeys 昇順キー
      * @return ソート後の配列
@@ -18,6 +19,7 @@ declare global {
     orderBy<K extends keyof T>(...sortKeys: K[]): T[];
 
     /**
+     * [拡張メソッド]
      * 指定したプロパティを元にソートします。
      * @param sortKeys sortKey:ソートキー, asc: 昇順フラグ
      * @return ソート後の配列

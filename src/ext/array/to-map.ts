@@ -3,6 +3,7 @@ export {};
 declare global {
   interface Array<T> {
     /**
+     * [拡張メソッド]
      * 配列をMapに変換します
      * @param keyFn
      * @param valueFn

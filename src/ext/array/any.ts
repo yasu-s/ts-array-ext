@@ -3,6 +3,7 @@ export {};
 declare global {
   interface Array<T> {
     /**
+     * [拡張メソッド]
      * 条件にあうデータが1件でもある場合、true
      * @description C# LINQのAnyメソッドと同様の動作をします。
      * @param callbackfn 条件

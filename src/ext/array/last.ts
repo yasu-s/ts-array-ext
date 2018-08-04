@@ -3,6 +3,7 @@ export {};
 declare global {
   interface Array<T> {
     /**
+     * [拡張メソッド]
      * 配列の最後のデータを取得します。
      * @description C# LINQのLastメソッドと同様の動作をします。
      * @return 配列の最後のデータ

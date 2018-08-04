@@ -3,6 +3,7 @@ export {};
 declare global {
   interface Array<T> {
     /**
+     * [拡張メソッド]
      * 配列の重複を除去します。
      * @return 重複除去後の配列
      */

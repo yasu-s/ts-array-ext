@@ -20,7 +20,7 @@ Array.prototype.toLookup = function<T, K, V>(keyFn: (value: T) => K, valueFn: (v
   const convItems = items.map(item => { return { key: keyFn(item), value: valueFn(item) }; });
 
   const map = new Map<K, V[]>();
-  for (const item of convItems.filter((item, index, array) => array.indexOf(item) === index)) {
+  for (const item of convItems) {
     if (map.has(item.key)) {
       const values = map.get(item.key);
       values.push(item.value);

@@ -1,5 +1,6 @@
 /* tslint:disable */
 import './array/any';
+import './array/calc';
 import './array/distinct';
 import './array/first';
 import './array/last';

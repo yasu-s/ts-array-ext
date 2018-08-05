@@ -1,9 +1,11 @@
 export {};
 
 /** ソート情報 */
-type SortInfo<K> = {
+type SortInfo<T, K> = {
   /** ソートキー */
-  sortKey: K,
+  sortKey?: K,
+  /** ソートコールバック */
+  sortFn?: (obj: T) => any,
   /** 昇順フラグ */
   asc: boolean
 };
@@ -21,10 +23,10 @@ declare global {
     /**
      * [拡張メソッド]
      * 指定したプロパティを元にソートします。
-     * @param sortKeys sortKey:ソートキー, asc: 昇順フラグ
+     * @param sortKeys sortKey:ソートキー, asc: 昇順フラグ, sortFn: ソート項目
      * @return ソート後の配列
      */
-    orderBy<K extends keyof T>(...sortKeys: { sortKey: K, asc: boolean }[]): T[];
+    orderBy<K extends keyof T>(...sortKeys: { sortKey?: K, asc: boolean, sortFn?: (obj: T) => any}[]): T[];
   }
 }
 
@@ -34,9 +36,9 @@ Array.prototype.orderBy = function<T, K extends keyof T>(...sortKeys: any[]): T[
   if (!Array.isArray(sortKeys) || sortKeys.length === 0)
     return items.sort();
   else {
-    let sortInfos: SortInfo<K>[];
+    let sortInfos: SortInfo<T, K>[];
     if (typeof sortKeys[0] === 'object')
-      sortInfos = sortKeys as SortInfo<K>[];
+      sortInfos = sortKeys as SortInfo<T, K>[];
     else
       sortInfos = (<K[]>sortKeys).map(key => { return { sortKey: key, asc: true }; });
     return items.sort((a: T, b: T) => compare(a, b, sortInfos));
@@ -50,10 +52,10 @@ Array.prototype.orderBy = function<T, K extends keyof T>(...sortKeys: any[]): T[
  * @param value2
  * @param sortInfos
  */
-function compare<T, K extends keyof T>(value1: T, value2: T, sortInfos: SortInfo<K>[]): number {
+function compare<T, K extends keyof T>(value1: T, value2: T, sortInfos: SortInfo<T, K>[]): number {
   const info = sortInfos[0];
-  const prop1 = value1[info.sortKey];
-  const prop2 = value2[info.sortKey];
+  const prop1 = (info.sortKey) ? value1[info.sortKey] : info.sortFn(value1);
+  const prop2 = (info.sortKey) ? value2[info.sortKey] : info.sortFn(value2);
 
   if (prop1 !== prop2) {
     // 値が異なる場合は昇順フラグを元に大小判定

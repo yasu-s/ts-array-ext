@@ -109,4 +109,26 @@ describe('Array.orderby', () => {
     expect(actual[2].id).toBe(1);
     expect(actual[3].id).toBe(2);
   });
+
+  it('sortKeys = { sortFn, asc: false }', () => {
+    // execrise
+    const actual = testData.orderBy({ sortFn: (d) => d.name, asc: false });
+
+    // verify
+    expect(actual[0].name).toBe('Char');
+    expect(actual[1].name).toBe('Bob');
+    expect(actual[2].name).toBe('Bob');
+    expect(actual[3].name).toBe('Alex');
+  });
+
+  it('sortKeys = { sortFn, asc: true }, { key:TestData.id, asc: false }', () => {
+    // execrise
+    const actual = testData.orderBy({ sortFn: (d) => d.name, asc: true }, { sortKey: 'id', asc: false });
+
+    // verify
+    expect(actual[0].id).toBe(4);
+    expect(actual[1].id).toBe(3);
+    expect(actual[2].id).toBe(1);
+    expect(actual[3].id).toBe(2);
+  });
 });

@@ -1,4 +1,5 @@
 /* tslint:disable */
+import './array/alias-linq';
 import './array/any';
 import './array/calc';
 import './array/distinct';

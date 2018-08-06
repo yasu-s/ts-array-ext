@@ -11,11 +11,13 @@
     "jest-html-reporter": "~2.4.2"
   },
   "scripts": {
-    "test": "jest --env=node --verbose",
-    "test:w": "jest --env=node --watch",
-    "test:wa": "jest --env=node --watchAll --verbose"
+    "test": "jest",
+    "test:w": "jest --watch",
+    "test:wa": "jest --watchAll"
   },
   "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
     "moduleFileExtensions": [
       "ts",
       "tsx",

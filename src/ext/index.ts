@@ -2,6 +2,7 @@
 import './array/alias-linq';
 import './array/any';
 import './array/calc';
+import './array/deep-copy';
 import './array/distinct';
 import './array/first';
 import './array/last';

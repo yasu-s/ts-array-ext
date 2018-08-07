@@ -1,46 +1,48 @@
 export {};
 
 /** ソート情報 */
-type SortInfo<T, K> = {
-  /** ソートキー */
-  sortKey?: K,
+type SortInfo<T> = {
   /** ソートコールバック */
-  sortFn?: (obj: T) => any,
+  sortFn: (obj: T) => any,
   /** 昇順フラグ */
-  asc: boolean
+  asc?: boolean
 };
 
 declare global {
   interface Array<T> {
     /**
      * [拡張メソッド]
-     * 指定したプロパティを元に昇順にソートします。
-     * @param sortKeys 昇順キー
+     * 指定したソート項目を元に昇順にソートします。
+     * @param sortFn ソート項目,
      * @return ソート後の配列
      */
-    orderBy<K extends keyof T>(...sortKeys: K[]): T[];
+    orderBy(...sortFn: ((obj: T) => any)[]): T[];
 
     /**
      * [拡張メソッド]
-     * 指定したプロパティを元にソートします。
-     * @param sortKeys sortKey:ソートキー, asc: 昇順フラグ, sortFn: ソート項目
+     * 指定したソート項目を元にソートします。
+     * @param sortKeys sortFn: ソート項目, asc: 昇順フラグ,
      * @return ソート後の配列
      */
-    orderBy<K extends keyof T>(...sortKeys: { sortKey?: K, asc: boolean, sortFn?: (obj: T) => any}[]): T[];
+    orderBy(...sortKeys: { sortFn: (obj: T) => any, asc?: boolean }[]): T[];
   }
 }
 
-Array.prototype.orderBy = function<T, K extends keyof T>(...sortKeys: any[]): T[] {
+Array.prototype.orderBy = function<T>(...sortKeys: any[]): T[] {
   const items = this as T[];
 
   if (!Array.isArray(sortKeys) || sortKeys.length === 0)
     return items.sort();
   else {
-    let sortInfos: SortInfo<T, K>[];
-    if (typeof sortKeys[0] === 'object')
-      sortInfos = sortKeys as SortInfo<T, K>[];
-    else
-      sortInfos = (<K[]>sortKeys).map(key => { return { sortKey: key, asc: true }; });
+    let sortInfos: SortInfo<T>[];
+    if (typeof sortKeys[0] === 'function')
+      sortInfos = sortKeys.map(fn => { return { sortFn: fn, asc: true }; });
+    else {
+      sortInfos = sortKeys.map((info: SortInfo<T>) => {
+        const asc = (info.asc === null || info.asc === undefined) ? true : info.asc;
+        return { sortFn: info.sortFn, asc: asc };
+      });
+    }
     return items.sort((a: T, b: T) => compare(a, b, sortInfos));
   }
 };
@@ -52,10 +54,10 @@ Array.prototype.orderBy = function<T, K extends keyof T>(...sortKeys: any[]): T[
  * @param value2
  * @param sortInfos
  */
-function compare<T, K extends keyof T>(value1: T, value2: T, sortInfos: SortInfo<T, K>[]): number {
+function compare<T>(value1: T, value2: T, sortInfos: SortInfo<T>[]): number {
   const info = sortInfos[0];
-  const prop1 = (info.sortKey) ? value1[info.sortKey] : info.sortFn(value1);
-  const prop2 = (info.sortKey) ? value2[info.sortKey] : info.sortFn(value2);
+  const prop1 = info.sortFn(value1);
+  const prop2 = info.sortFn(value2);
 
   if (prop1 !== prop2) {
     // 値が異なる場合は昇順フラグを元に大小判定

@@ -1,7 +1,7 @@
 export {};
 
 declare global {
-  interface Array<T> {
+  interface Array<T = number> {
     /**
      * [拡張メソッド]
      * 数値配列の合計値を取得します。

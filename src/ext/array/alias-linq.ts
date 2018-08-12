@@ -50,7 +50,7 @@ declare global {
      * [拡張メソッド]
      * 配列の先頭から指定した数の要素を返します。
      * @description
-     * C# LINQのSkipメソッドと同様の動作をします。
+     * C# LINQのTakeメソッドと同様の動作をします。
      * Array.slice をラッピングしています。
      * @param count 返す要素数
      * @return 先頭から指定した数の要素

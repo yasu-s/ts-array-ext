@@ -64,3 +64,46 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     </td>
   </tr>  
 </table>
+
+## Map
+
+<table>
+  <tr>
+    <th>拡張メソッド</th>
+    <th>TypeScriptファイル</th>
+    <th>概要</th>
+  </tr>
+  <tr>
+    <td>toArray</td>
+    <td><a href="./src/ext/map/to-array.ts">./src/ext/map/to-array.ts</a></td>
+    <td>
+      配列をMapに変換します
+    </td>
+  </tr>  
+</table>
+
+
+## Object
+
+<table>
+  <tr>
+    <th>拡張メソッド</th>
+    <th>TypeScriptファイル</th>
+    <th>概要</th>
+  </tr>
+  <tr>
+    <td>deepCopy</td>
+    <td><a href="./src/ext/object/deep-copy.ts">./src/ext/object/deep-copy.ts</a></td>
+    <td>
+      Object をディープコピーします。
+    </td>
+  </tr>  
+  <tr>
+    <td>equalTo</td>
+    <td><a href="./src/ext/object/equal-to.ts">./src/ext/object/equal-to.ts</a></td>
+    <td>
+      オブジェクトの内容が同じ場合、true
+    </td>
+  </tr>  
+</table>
+

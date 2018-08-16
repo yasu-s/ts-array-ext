@@ -6,7 +6,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 
 * Node.js 8.x
 * TypeScript 2.9.x  
-* jest 23.x
+* jest 23.x (Unit Test)
 
 # 拡張メソッド一覧
 

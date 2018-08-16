@@ -1,4 +1,4 @@
-export {};
+export = {};
 
 /** ソート情報 */
 type SortInfo<T> = {

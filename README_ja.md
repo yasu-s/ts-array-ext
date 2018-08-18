@@ -125,7 +125,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     </td>
   </tr>  
   <tr>
-    <td>distinct</td>
+    <td>distinctBy</td>
     <td><a href="./src/ext/array/distinct.ts">./src/ext/array/distinct.ts</a></td>
     <td>-</td>
     <td>

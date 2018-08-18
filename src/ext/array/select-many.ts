@@ -4,7 +4,7 @@ declare global {
   interface Array<T> {
     /**
      * [拡張メソッド]
-     * callbackfnで戻した配列を結合します
+     * callbackfnで戻した値を結合して配列として戻します。
      * @param callbackfn 条件
      * @return 結合後の配列
      */

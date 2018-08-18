@@ -6,7 +6,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 
 * Node.js 8.x
 * TypeScript 2.9.x  
-* jest 23.x
+* jest 23.x (Unit Test)
 
 # 拡張メソッド一覧
 
@@ -124,6 +124,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
       配列の重複を除去します。
     </td>
   </tr>  
+  <tr>
+    <td>distinct</td>
+    <td><a href="./src/ext/array/distinct.ts">./src/ext/array/distinct.ts</a></td>
+    <td>-</td>
+    <td>
+      判定対象を比較して配列から重複を除去します。
+    </td>
+  </tr>  
+
 
   <tr>
     <td>equalTo</td>
@@ -166,7 +175,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     <td><a href="./src/ext/array/select-many.ts">./src/ext/array/select-many.ts</a></td>
     <td>SelectMany</td>
     <td>
-      callbackfnで戻した配列を結合します
+      callbackfnで戻した値を結合して配列として戻します。
     </td>
   </tr>  
 
@@ -175,7 +184,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     <td><a href="./src/ext/array/to-lookup.ts">./src/ext/array/to-lookup.ts</a></td>
     <td>ToLookup</td>
     <td>
-      配列をMap<K, V[]>に変換します
+      配列をMap&lt;K, V[]&gt;に変換します
     </td>
   </tr>  
 

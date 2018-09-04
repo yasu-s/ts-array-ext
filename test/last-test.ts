@@ -5,7 +5,7 @@ describe('Array.last', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.last();
 
     // verify
@@ -16,7 +16,7 @@ describe('Array.last', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.last();
 
     // verify

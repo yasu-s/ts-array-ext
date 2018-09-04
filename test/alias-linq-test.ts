@@ -5,7 +5,7 @@ describe('Array.select', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.select(item => item + 3);
 
     // verify
@@ -16,7 +16,7 @@ describe('Array.select', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.select(item => item + 3);
 
     // verify
@@ -29,7 +29,7 @@ describe('Array.where', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.where(item => item > 1);
 
     // verify
@@ -40,7 +40,7 @@ describe('Array.where', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.where(item => item > 1);
 
     // verify
@@ -53,7 +53,7 @@ describe('Array.all', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.all(item => item > 0);
 
     // verify
@@ -64,7 +64,7 @@ describe('Array.all', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.all(item => item > 1);
 
     // verify
@@ -75,7 +75,7 @@ describe('Array.all', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.all(item => item > 1);
 
     // verify
@@ -88,7 +88,7 @@ describe('Array.skip', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.skip(1);
 
     // verify
@@ -101,7 +101,7 @@ describe('Array.take', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.take(2);
 
     // verify

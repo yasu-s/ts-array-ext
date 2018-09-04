@@ -5,7 +5,7 @@ describe('Array.distinct', () => {
     // setup
     const items = [1, 2, '1', 1, '2', '1'];
 
-    // execrise
+    // exercise
     const actual = items.distinct();
 
     // verify
@@ -16,7 +16,7 @@ describe('Array.distinct', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.distinct();
 
     // verify
@@ -33,7 +33,7 @@ describe('Array.distinctBy', () => {
       { id: 3, name: 'Alex' },
     ];
 
-    // execrise
+    // exercise
     const actual = items.distinctBy(item => item.name);
 
     // verify
@@ -48,7 +48,7 @@ describe('Array.distinctBy', () => {
       { id: 2, name: 'Alex' },
     ];
 
-    // execrise
+    // exercise
     const actual = items.distinctBy(item => item.id);
 
     // verify
@@ -59,7 +59,7 @@ describe('Array.distinctBy', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.distinctBy(item => item);
 
     // verify
@@ -70,7 +70,7 @@ describe('Array.distinctBy', () => {
     // setup
     const items = [1, 2, '1', 1, '2', '1'];
 
-    // execrise
+    // exercise
     const actual = items.distinctBy(null);
 
     // verify

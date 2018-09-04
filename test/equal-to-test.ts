@@ -9,7 +9,7 @@ describe('Array.equalTo', () => {
       const items  = [1, 2, 3];
       const target = [1, 2, 3];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -21,7 +21,7 @@ describe('Array.equalTo', () => {
       const items  = [1, 2, 3];
       const target = [1, 2, 4];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -35,7 +35,7 @@ describe('Array.equalTo', () => {
       const items  = [{ id: 1, name: 'hoge' }, { id: 2, name: 'hige' }];
       const target = [{ id: 1, name: 'hoge' }, { id: 2, name: 'hige' }];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -47,7 +47,7 @@ describe('Array.equalTo', () => {
       const items  = [{ id: 1, name: 'hoge' }, { id: 2, name: 'hige' }];
       const target = [{ id: 1, name: 'hoge' }, { id: 2, name: 'huge' }];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -61,7 +61,7 @@ describe('Array.equalTo', () => {
       const items  = [ { data: [{ id: 1, name: 'hoge' }] } ];
       const target = [ { data: [{ id: 1, name: 'hoge' }] } ];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -73,7 +73,7 @@ describe('Array.equalTo', () => {
       const items  = [ { data: [{ id: 1, name: 'hoge' }] } ];
       const target = [ { data: [{ id: 2, name: 'hoge' }] } ];
 
-      // execrise
+      // exercise
       const actual = items.equalTo(target);
 
       // verify
@@ -90,7 +90,7 @@ describe('Object.equalTo', () => {
       const obj    = { id: 1, name: 'hoge' };
       const target = { id: 1, name: 'hoge' };
 
-      // execrise
+      // exercise
       const actual = obj.equalTo(target);
 
       // verify
@@ -102,7 +102,7 @@ describe('Object.equalTo', () => {
       const obj    = { id: 1, name: 'hoge' };
       const target = { id: 2, name: 'hoge' };
 
-      // execrise
+      // exercise
       const actual = obj.equalTo(target);
 
       // verify
@@ -116,7 +116,7 @@ describe('Object.equalTo', () => {
       const obj    = { data: [{ id: 1, name: 'hoge' }] };
       const target = { data: [{ id: 1, name: 'hoge' }] };
 
-      // execrise
+      // exercise
       const actual = obj.equalTo(target);
 
       // verify
@@ -128,7 +128,7 @@ describe('Object.equalTo', () => {
       const obj    = { data: [{ id: 1, name: 'hoge' }] };
       const target = { data: [{ id: 2, name: 'hoge' }] };
 
-      // execrise
+      // exercise
       const actual = obj.equalTo(target);
 
       // verify

@@ -5,7 +5,7 @@ describe('Array.first', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.first();
 
     // verify
@@ -16,7 +16,7 @@ describe('Array.first', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.first();
 
     // verify

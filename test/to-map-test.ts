@@ -34,7 +34,7 @@ describe('Array.toMap', () => {
   });
 
   it('key = id, value = name', () => {
-    // execrise
+    // exercise
     const actual = testData.toMap((item) => item.id, (item) => item.name);
 
     // verify
@@ -45,7 +45,7 @@ describe('Array.toMap', () => {
   });
 
   it('key = name, value = id', () => {
-    // execrise
+    // exercise
     const actual = testData.toMap((item) => item.name, (item) => item.id);
 
     // verify

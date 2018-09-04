@@ -6,7 +6,7 @@ describe('Array.deepCopy', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.deepCopy();
 
     // verify
@@ -18,7 +18,7 @@ describe('Array.deepCopy', () => {
     // setup
     const items = [{ id: 1, name: 'hoge' }, { id: 2, name: 'hige' }];
 
-    // execrise
+    // exercise
     const actual = items.deepCopy();
 
     // verify
@@ -30,7 +30,7 @@ describe('Array.deepCopy', () => {
     // setup
     const items = [ { data: [{ id: 1, name: 'hoge' }] } ];
 
-    // execrise
+    // exercise
     const actual = items.deepCopy();
 
     // verify
@@ -44,7 +44,7 @@ describe('Object.deepCopy', () => {
     // setup
     const obj = { id: 1, name: 'hoge' };
 
-    // execrise
+    // exercise
     const actual = obj.deepCopy();
 
     // verify
@@ -56,7 +56,7 @@ describe('Object.deepCopy', () => {
     // setup
     const obj = { data: [{ id: 1, name: 'hoge' }] };
 
-    // execrise
+    // exercise
     const actual = obj.deepCopy();
 
     // verify

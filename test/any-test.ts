@@ -5,7 +5,7 @@ describe('Array.any', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.any(value => value === 2);
 
     // verify
@@ -16,7 +16,7 @@ describe('Array.any', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.any(value => value === 4);
 
     // verify
@@ -27,7 +27,7 @@ describe('Array.any', () => {
     // setup
     const items = [1, 2, 3];
 
-    // execrise
+    // exercise
     const actual = items.any();
 
     // verify
@@ -38,7 +38,7 @@ describe('Array.any', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.any();
 
     // verify

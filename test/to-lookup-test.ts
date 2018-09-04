@@ -34,7 +34,7 @@ describe('Array.toLookup', () => {
   });
 
   it('key = id, value = name', () => {
-    // execrise
+    // exercise
     const actual = testData.toLookup((item) => item.id, (item) => item.name);
 
     // verify
@@ -45,7 +45,7 @@ describe('Array.toLookup', () => {
   });
 
   it('key = name, value = id', () => {
-    // execrise
+    // exercise
     const actual = testData.toLookup((item) => item.name, (item) => item.id);
 
     // verify

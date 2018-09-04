@@ -8,7 +8,7 @@ describe('Map.toArray', () => {
       [ 2, 'Bob' ]
     ]);
 
-    // execrise
+    // exercise
     const actual = map.toArray();
 
     // verify

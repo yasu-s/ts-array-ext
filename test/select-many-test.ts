@@ -5,7 +5,7 @@ describe('Array.selectMany', () => {
     // setup
     const items = [ [1, 2, 3], [4, 5] ];
 
-    // execrise
+    // exercise
     const actual = items.selectMany((value) => value);
 
     // verify
@@ -17,7 +17,7 @@ describe('Array.selectMany', () => {
     // setup
     const items = [];
 
-    // execrise
+    // exercise
     const actual = items.selectMany((value) => value);
 
     // verify

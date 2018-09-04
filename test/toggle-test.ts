@@ -5,7 +5,7 @@ describe('Boolean.toggle', () => {
     // setup
     const target = true;
 
-    // execrise
+    // exercise
     const actual = target.toggle();
 
     // verify
@@ -16,7 +16,7 @@ describe('Boolean.toggle', () => {
     // setup
     const target = false;
 
-    // execrise
+    // exercise
     const actual = target.toggle();
 
     // verify

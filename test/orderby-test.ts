@@ -37,7 +37,7 @@ describe('Array.orderby', () => {
     // setup
     const items = [3, 1, 2];
 
-    // execrise
+    // exercise
     const actual = items.orderBy();
 
     // verify
@@ -45,7 +45,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = TestData.id', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy(d => d.id);
 
     // verify
@@ -56,7 +56,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = TestData.name', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy(d => d.name);
 
     // verify
@@ -67,7 +67,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = TestData.name, TestData.id', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy(d => d.name, d => d.id);
 
     // verify
@@ -78,7 +78,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = { sortFn }', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy({ sortFn: (d) => d.name });
 
     // verify
@@ -89,7 +89,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = { sortFn, asc: false }', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy({ sortFn: d => d.name, asc: false });
 
     // verify
@@ -100,7 +100,7 @@ describe('Array.orderby', () => {
   });
 
   it('sortKeys = { sortFn, asc: true }, { sortFn, asc: false }', () => {
-    // execrise
+    // exercise
     const actual = testData.orderBy({ sortFn: d => d.name, asc: true }, { sortFn: d => d.id, asc: false });
 
     // verify

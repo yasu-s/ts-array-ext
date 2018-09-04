@@ -215,6 +215,23 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
   </tr>  
 </table>
 
+## Boolean
+
+<table>
+  <tr>
+    <th>拡張メソッド</th>
+    <th>TypeScriptファイル</th>
+    <th>概要</th>
+  </tr>
+  <tr>
+    <td>equalTo</td>
+    <td><a href="./src/ext/boolean/toggle.ts">./src/ext/boolean/toggle.ts</a></td>
+    <td>
+      booleanのtrue/falseを切り替えます
+    </td>
+  </tr>  
+</table>
+
 
 ## Object
 

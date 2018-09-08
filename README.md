@@ -1,23 +1,23 @@
-# 概要
+# Overview
 
-TypeScriptの Array 拡張メソッドのサンプル集です。
+A sample collection of TypeScript 's Array extension method.
 
-# 動作環境
+# System requirements
 
 * Node.js 8.x
 * TypeScript 2.9.x  
 * jest 23.x (Unit Test)
 
-# 拡張メソッド一覧
+# Extension Method list
 
 ## Array
 
 <table>
   <tr>
-    <th>拡張メソッド</th>
-    <th>TypeScriptファイル</th>
+    <th>Extension Method</th>
+    <th>TypeScript file</th>
     <th>C# LINQ</th>
-    <th>概要</th>
+    <th>Overview</th>
   </tr>
   <tr>
     <td>select</td>
@@ -202,15 +202,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 
 <table>
   <tr>
-    <th>拡張メソッド</th>
-    <th>TypeScriptファイル</th>
-    <th>概要</th>
+    <th>Extension Method</th>
+    <th>TypeScript file</th>
+    <th>Overview</th>
   </tr>
   <tr>
     <td>toArray</td>
     <td><a href="./src/ext/map/to-array.ts">./src/ext/map/to-array.ts</a></td>
     <td>
-      配列をMapに変換します
+      Convert Map to an Array.
     </td>
   </tr>  
 </table>
@@ -219,15 +219,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 
 <table>
   <tr>
-    <th>拡張メソッド</th>
-    <th>TypeScriptファイル</th>
-    <th>概要</th>
+    <th>Extension Method</th>
+    <th>TypeScript file</th>
+    <th>Overview</th>
   </tr>
   <tr>
-    <td>equalTo</td>
+    <td>toggle</td>
     <td><a href="./src/ext/boolean/toggle.ts">./src/ext/boolean/toggle.ts</a></td>
     <td>
-      booleanのtrue/falseを切り替えます
+      Toggle boolean true / false.
     </td>
   </tr>  
 </table>
@@ -237,22 +237,22 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 
 <table>
   <tr>
-    <th>拡張メソッド</th>
-    <th>TypeScriptファイル</th>
-    <th>概要</th>
+    <th>Extension Method</th>
+    <th>TypeScript file</th>
+    <th>Overview</th>
   </tr>
   <tr>
     <td>deepCopy</td>
     <td><a href="./src/ext/object/deep-copy.ts">./src/ext/object/deep-copy.ts</a></td>
     <td>
-      Object をディープコピーします。
+      Deep copy the Object.
     </td>
   </tr>  
   <tr>
     <td>equalTo</td>
     <td><a href="./src/ext/object/equal-to.ts">./src/ext/object/equal-to.ts</a></td>
     <td>
-      オブジェクトの内容が同じ場合、true
+      True if the contents of the object are the same.
     </td>
   </tr>  
 </table>

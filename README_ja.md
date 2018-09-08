@@ -210,7 +210,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     <td>toArray</td>
     <td><a href="./src/ext/map/to-array.ts">./src/ext/map/to-array.ts</a></td>
     <td>
-      配列をMapに変換します
+      Mapを配列に変換します
     </td>
   </tr>  
 </table>
@@ -224,7 +224,7 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
     <th>概要</th>
   </tr>
   <tr>
-    <td>equalTo</td>
+    <td>toggle</td>
     <td><a href="./src/ext/boolean/toggle.ts">./src/ext/boolean/toggle.ts</a></td>
     <td>
       booleanのtrue/falseを切り替えます

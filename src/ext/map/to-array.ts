@@ -4,7 +4,7 @@ declare global {
   interface Map<K, V> {
     /**
      * [拡張メソッド]
-     * 配列をMapに変換します
+     * Mapを配列に変換します
      * @return Map
      */
     toArray(): Array<{ key: K, value: V }>;

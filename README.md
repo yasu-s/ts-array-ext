@@ -24,8 +24,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/alias-linq.ts">./src/ext/array/alias-linq.ts</a></td>
     <td>Select</td>
     <td>
-      配列の各要素を新しい配列に射影します。<br />
-      Array.map をラッピングしています。
+      Project each element of the array to a new array.
     </td>
   </tr>  
   <tr>
@@ -33,8 +32,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/alias-linq.ts">./src/ext/array/alias-linq.ts</a></td>
     <td>Where</td>
     <td>
-      配列の指定した条件で抽出します。<br />
-      Array.filter をラッピングしています。
+      Extract the array under specified conditions.
     </td>
   </tr>  
   <tr>
@@ -42,8 +40,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/alias-linq.ts">./src/ext/array/alias-linq.ts</a></td>
     <td>All</td>
     <td>
-      配列のすべての要素が条件を満たすかどうか判定します。<br />
-      Array.every をラッピングしています。
+      Determines whether all elements of the array satisfy the condition.
     </td>
   </tr>  
   <tr>
@@ -51,8 +48,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/alias-linq.ts">./src/ext/array/alias-linq.ts</a></td>
     <td>Skip</td>
     <td>
-      先頭から指定された数の要素をスキップし、残りの配列を返します。<br />
-      Array.slice をラッピングしています。
+      Skips the specified number of elements from the beginning and returns the remaining array.
     </td>
   </tr>  
   <tr>
@@ -60,8 +56,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/alias-linq.ts">./src/ext/array/alias-linq.ts</a></td>
     <td>Take</td>
     <td>
-      配列の先頭から指定した数の要素を返します。<br />
-      Array.slice をラッピングしています。
+      Returns the specified number of elements from the beginning of the array.
     </td>
   </tr>
 
@@ -70,7 +65,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/any.ts">./src/ext/array/any.ts</a></td>
     <td>Any</td>
     <td>
-      条件にあうデータが1件でもある場合、true
+      True if there is even one case that matches the condition
     </td>
   </tr>  
 
@@ -79,7 +74,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/calc.ts">./src/ext/array/calc.ts</a></td>
     <td>Sum</td>
     <td>
-      数値配列の合計値を取得します。
+      Gets the total value of numeric array.
     </td>
   </tr>  
   <tr>
@@ -87,7 +82,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/calc.ts">./src/ext/array/calc.ts</a></td>
     <td>Average</td>
     <td>
-      数値配列の平均値を取得します。
+      Gets the average value of numeric array.
     </td>
   </tr>  
   <tr>
@@ -95,7 +90,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/calc.ts">./src/ext/array/calc.ts</a></td>
     <td>Max</td>
     <td>
-      数値配列の最大値を取得します。
+      Get the maximum value of a numeric array.
     </td>
   </tr>  
   <tr>
@@ -103,7 +98,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/calc.ts">./src/ext/array/calc.ts</a></td>
     <td>Min</td>
     <td>
-      数値配列の最小値を取得します。
+      Get the minimum value of a numeric array.
     </td>
   </tr>  
 
@@ -112,7 +107,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/deep-copy.ts">./src/ext/array/deep-copy.ts</a></td>
     <td>-</td>
     <td>
-      Arrayをディープコピーします。
+      Deep copy the Array.
     </td>
   </tr>  
 
@@ -121,7 +116,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/distinct.ts">./src/ext/array/distinct.ts</a></td>
     <td>Distinct</td>
     <td>
-      配列の重複を除去します。
+      Remove array duplication.
     </td>
   </tr>  
   <tr>
@@ -129,7 +124,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/distinct.ts">./src/ext/array/distinct.ts</a></td>
     <td>-</td>
     <td>
-      判定対象を比較して配列から重複を除去します。
+      We will eliminate duplicates from arrays by comparing judgment targets.
     </td>
   </tr>  
 
@@ -139,7 +134,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/equal-to.ts">./src/ext/array/equal-to.ts</a></td>
     <td>-</td>
     <td>
-      配列の内容が同じ場合、true
+      True if the contents of the array are the same
     </td>
   </tr>  
 
@@ -148,7 +143,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/first.ts">./src/ext/array/first.ts</a></td>
     <td>First</td>
     <td>
-      配列の最初のデータを取得します。
+      Get the first data of the array.
     </td>
   </tr>  
 
@@ -157,7 +152,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/last.ts">./src/ext/array/last.ts</a></td>
     <td>Last</td>
     <td>
-      配列の最後のデータを取得します。
+      Get the last data of the array.
     </td>
   </tr>  
 
@@ -166,7 +161,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/orderby.ts">./src/ext/array/orderby.ts</a></td>
     <td>-</td>
     <td>
-      指定したソート項目を元にソートします。
+      Sort based on the specified sort item.
     </td>
   </tr>  
 
@@ -175,7 +170,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/select-many.ts">./src/ext/array/select-many.ts</a></td>
     <td>SelectMany</td>
     <td>
-      callbackfnで戻した値を結合して配列として戻します。
+      Combine the values returned by callbackfn and return them as an array.
     </td>
   </tr>  
 
@@ -184,7 +179,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/to-lookup.ts">./src/ext/array/to-lookup.ts</a></td>
     <td>ToLookup</td>
     <td>
-      配列をMap&lt;K, V[]&gt;に変換します
+      Convert array to Map&lt;K, V[]&gt;
     </td>
   </tr>  
 
@@ -193,7 +188,7 @@ A sample collection of TypeScript 's Array extension method.
     <td><a href="./src/ext/array/to-map.ts">./src/ext/array/to-map.ts</a></td>
     <td>ToMap</td>
     <td>
-      配列をMapに変換します
+      Convert array to Map.
     </td>
   </tr>  
 </table>

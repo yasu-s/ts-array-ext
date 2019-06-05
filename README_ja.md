@@ -196,6 +196,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
       配列をMapに変換します
     </td>
   </tr>  
+
+  <tr>
+    <td>toSet</td>
+    <td><a href="./src/ext/array/to-set.ts">./src/ext/array/to-set.ts</a></td>
+    <td>-</td>
+    <td>
+      配列をSetに変換します
+    </td>
+  </tr>  
 </table>
 
 ## Map

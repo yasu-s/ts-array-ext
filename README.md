@@ -191,6 +191,14 @@ A sample collection of TypeScript 's Array extension method.
       Convert array to Map.
     </td>
   </tr>  
+  
+  <tr>
+    <td>toSet</td>
+    <td><a href="./src/ext/array/to-set.ts">./src/ext/array/to-set.ts</a></td>
+    <td>-</td>
+    <td>
+    </td>
+  </tr>  
 </table>
 
 ## Map

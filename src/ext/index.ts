@@ -15,3 +15,4 @@ import './array/trim';
 import './map/to-array';
 import './object/deep-copy';
 import './object/equal-to';
+import './promise/rxjs';

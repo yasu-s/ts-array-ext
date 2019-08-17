@@ -1,11 +1,10 @@
 {
-    "git.ignoreLimitWarning": true,
-    "tslint.alwaysShowRuleFailuresAsWarnings": true,
-    "tslint.alwaysShowStatus": true,
-    "tslint.configFile": "tslint.json",
-    "[markdown]": {
-        "files.trimTrailingWhitespace": false
-    },
-    "editor.tabSize": 2,
-    "files.insertFinalNewline": true,
+  "git.ignoreLimitWarning": true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "tslint.configFile": "tslint.json",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
 }

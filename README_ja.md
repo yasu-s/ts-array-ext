@@ -5,8 +5,8 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
 # 動作環境
 
 * Node.js 8.x
-* TypeScript 2.9.x  
-* jest 23.x (Unit Test)
+* TypeScript 3.4.x  
+* jest 24.x (Unit Test)
 
 # 拡張メソッド一覧
 

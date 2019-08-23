@@ -1,0 +1,18 @@
+name: CI-test
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: yarn install
+      run:  sudo apt-get update && sudo apt-get install yarn
+    - name: package install
+      run:  yarn
+    - name: test
+      run:  yarn test
+ 

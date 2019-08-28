@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 describe('Jasmine', () => {
   it('createSpy', () => {
     // setup
@@ -29,6 +31,19 @@ describe('Jasmine', () => {
 
     // exercise
     const actual = new Date();
+
+    // verify
+    expect(actual.valueOf()).toBe(sec);
+  });
+
+  it('moment', () => {
+    // setup
+    const date = new Date(2019, 2, 1);
+    const sec = date.valueOf();
+    jasmine.clock().mockDate(date);
+
+    // exercise
+    const actual = moment();
 
     // verify
     expect(actual.valueOf()).toBe(sec);

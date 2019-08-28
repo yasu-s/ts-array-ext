@@ -11,9 +11,6 @@ describe('jest', () => {
   });
 
   it('Date.now not mock', () => {
-    // setup
-    jest.resetAllMocks();
-
     // exercise
     const actual = Date.now();
 

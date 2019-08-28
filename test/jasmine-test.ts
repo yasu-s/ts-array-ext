@@ -10,13 +10,8 @@ describe('Jasmine', () => {
     expect(hoge).toHaveBeenCalled();
   });
 
-  it('clock', () => {
+  it('clock - Date.now', () => {
     // setup
-    jasmine.clock = jest.fn().mockReturnValue({
-      mockDate: (date?: Date) => {
-        Date.now = jest.fn().mockReturnValue(date.valueOf());
-      }
-    });
     jasmine.clock().mockDate(new Date(2019, 1, 1));
 
     // exercise
@@ -24,5 +19,18 @@ describe('Jasmine', () => {
 
     // verify
     expect(actual).toBe(new Date(2019, 1, 1).valueOf());
+  });
+
+  it('clock - new Date', () => {
+    // setup
+    const date = new Date(2019, 2, 1);
+    const sec = date.valueOf();
+    jasmine.clock().mockDate(date);
+
+    // exercise
+    const actual = new Date();
+
+    // verify
+    expect(actual.valueOf()).toBe(sec);
   });
 });

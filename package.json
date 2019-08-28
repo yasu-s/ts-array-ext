@@ -37,7 +37,7 @@
     ],
     "resetMocks": true,
     "setupFilesAfterEnv": [
-      "./setup-jest.js"
+      "./setup-clock-patch.js"
     ]
   }
 }

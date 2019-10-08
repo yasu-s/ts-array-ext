@@ -7,4 +7,5 @@
   },
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
 }

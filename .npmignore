@@ -1,0 +1,7 @@
+.github
+.vscode
+coverage
+docker
+node_modules
+src
+test

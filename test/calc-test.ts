@@ -14,7 +14,7 @@ describe('Array.sum', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.sum();
@@ -38,7 +38,7 @@ describe('Array.average', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.average();
@@ -62,7 +62,7 @@ describe('Array.max', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.max();
@@ -86,7 +86,7 @@ describe('Array.min', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.min();

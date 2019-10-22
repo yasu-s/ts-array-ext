@@ -14,7 +14,7 @@ describe('Array.select', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.select(item => item + 3);
@@ -38,7 +38,7 @@ describe('Array.where', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.where(item => item > 1);
@@ -73,7 +73,7 @@ describe('Array.all', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.all(item => item > 1);

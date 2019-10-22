@@ -61,13 +61,11 @@ declare global {
 
 Array.prototype.select = function<T, U>(callbackfn: (value: T, index: number, array: T[]) => U): U[] {
   const items = this as T[];
-  if (!Array.isArray(items)) return null;
   return items.map(callbackfn);
 };
 
 Array.prototype.where = function<T>(callbackfn: (value: T, index: number, array: T[]) => any): T[] {
   const items = this as T[];
-  if (!Array.isArray(items)) return null;
   return items.filter(callbackfn);
 };
 
@@ -79,12 +77,10 @@ Array.prototype.all = function<T>(callbackfn: (value: T, index: number, array: T
 
 Array.prototype.skip = function<T>(count: number): T[] {
   const items = this as T[];
-  if (!Array.isArray(items)) return null;
   return items.slice(count);
 };
 
 Array.prototype.take = function<T>(count: number): T[] {
   const items = this as T[];
-  if (!Array.isArray(items)) return null;
   return items.slice(0, count);
 };

@@ -15,7 +15,7 @@ describe('Array.selectMany', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[][];
 
     // exercise
     const actual = items.selectMany((value) => value);

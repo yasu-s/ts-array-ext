@@ -36,7 +36,7 @@ describe('Array.trim', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.trim();

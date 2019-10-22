@@ -1,9 +1,9 @@
 import '../src/ext/array/to-set';
 
 class TestData {
-  id: number;
-  name: string;
-  memo: string;
+  id = 0;
+  name = '';
+  memo = '';
 }
 
 describe('Array.toSet', () => {

@@ -36,7 +36,7 @@ describe('Array.any', () => {
 
   it('callbackfn = null, array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.any();

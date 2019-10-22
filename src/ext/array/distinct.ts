@@ -15,7 +15,7 @@ declare global {
      * @param keySelector 重複判定対象
      * @return 重複除去後の配列
      */
-    distinctBy<K>(keySelector: (obj: T) => K);
+    distinctBy<K>(keySelector?: (obj: T) => K): T[];
   }
 }
 
@@ -25,7 +25,7 @@ Array.prototype.distinct = function<T>(): T[] {
   return items.filter((item, index, array) => array.indexOf(item) === index);
 };
 
-Array.prototype.distinctBy = function<T, K>(keySelector: (obj: T) => K): T[] {
+Array.prototype.distinctBy = function<T, K>(keySelector?: (obj: T) => K): T[] {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return [];
   if (!keySelector) return items.distinct();

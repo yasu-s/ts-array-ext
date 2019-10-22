@@ -15,8 +15,6 @@ declare global {
 
 Array.prototype.toMap = function<T, K, V>(keyFn: (value: T) => K, valueFn: (value: T) => V): Map<K, V> {
   const items = this as T[];
-  if (!Array.isArray(items)) return null;
-
   const convItems = items.map(item => { return { key: keyFn(item), value: valueFn(item) }; });
 
   const map = new Map<K, V>();

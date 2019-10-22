@@ -14,7 +14,7 @@ describe('Array.distinct', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.distinct();
@@ -57,7 +57,7 @@ describe('Array.distinctBy', () => {
 
   it('Array.length = 0', () => {
     // setup
-    const items = [];
+    const items = [] as number[];
 
     // exercise
     const actual = items.distinctBy(item => item);
@@ -66,12 +66,12 @@ describe('Array.distinctBy', () => {
     expect(actual).toEqual([]);
   });
 
-  it('args = null', () => {
+  it('args = undefined', () => {
     // setup
     const items = [1, 2, '1', 1, '2', '1'];
 
     // exercise
-    const actual = items.distinctBy(null);
+    const actual = items.distinctBy();
 
     // verify
     expect(actual).toEqual([1, 2, '1', '2']);

@@ -4,6 +4,10 @@
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
+    "strict": true,
+    "stripInternal": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "typeRoots": [
       "node_modules/@types"
     ]

@@ -8,6 +8,7 @@ import './array/equal-to';
 import './array/first';
 import './array/last';
 import './array/orderby';
+import './array/remove';
 import './array/to-lookup';
 import './array/to-map';
 import './array/to-set';

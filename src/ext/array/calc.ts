@@ -34,43 +34,26 @@ declare global {
 
 Array.prototype.sum = function() {
   const items = this as number[];
-  if (!Array.isArray(items) || items.length === 0) return 0;
-  let total = 0;
-  for (const num of items) {
-    total += num;
-  }
-  return total;
+  if (!Array.isArray(items)) return 0;
+  return items.reduce((sum, num) => sum + num, 0);
 };
 
 Array.prototype.average = function() {
   const items = this as number[];
   if (!Array.isArray(items) || items.length === 0) return 0;
-  let total = 0;
-  for (const num of items) {
-    total += num;
-  }
+  const total = items.reduce((sum, num) => sum + num, 0);
   return total / items.length;
 };
 
 
 Array.prototype.max = function() {
   const items = this as number[];
-  if (!Array.isArray(items) || items.length === 0) return 0;
-  let max = items[0];
-  for (const num of items) {
-    if (max < num)
-      max = num;
-  }
-  return max;
+  if (!Array.isArray(items)) return 0;
+  return items.reduce((max, num) => max > num ? max : num, 0);
 };
 
 Array.prototype.min = function() {
   const items = this as number[];
   if (!Array.isArray(items) || items.length === 0) return 0;
-  let min = items[0];
-  for (const num of items) {
-    if (num < min)
-      min = num;
-  }
-  return min;
+  return items.reduce((min, num) => min < num ? min : num);
 };

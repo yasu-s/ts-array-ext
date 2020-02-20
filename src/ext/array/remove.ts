@@ -27,8 +27,7 @@ Array.prototype.remove = function<T>(target: T) {
   if (index < 0) {
     return;
   }
-  items.splice(index, 1)
-  return;
+  items.splice(index, 1);
 };
 
 Array.prototype.removeAt = function<T>(index: number) {

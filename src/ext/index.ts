@@ -14,6 +14,7 @@ import './array/to-lookup';
 import './array/to-map';
 import './array/to-set';
 import './array/trim';
+import './array/zip';
 import './map/to-array';
 import './object/deep-copy';
 import './object/equal-to';

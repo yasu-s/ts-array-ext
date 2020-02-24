@@ -205,6 +205,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
       配列をSetに変換します
     </td>
   </tr>  
+
+  <tr>
+    <td>toSet</td>
+    <td><a href="./src/ext/array/zip.ts">./src/ext/array/zip.ts</a></td>
+    <td>Zip</td>
+    <td>
+       2 つのシーケンスの対応する要素に対して、1 つの指定した関数を適用し、結果として 1 つのシーケンスを生成します。
+    </td>
+  </tr>
 </table>
 
 ## Map

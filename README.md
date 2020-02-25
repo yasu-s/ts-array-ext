@@ -199,6 +199,15 @@ A sample collection of TypeScript 's Array extension method.
     <td>
     </td>
   </tr>  
+
+  <tr>
+    <td>toSet</td>
+    <td><a href="./src/ext/array/zip.ts">./src/ext/array/zip.ts</a></td>
+    <td>Zip</td>
+    <td>
+      Applies one specified function to corresponding elements of two sequences, producing one sequence as a result.
+    </td>
+  </tr>
 </table>
 
 ## Map

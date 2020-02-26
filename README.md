@@ -201,7 +201,7 @@ A sample collection of TypeScript 's Array extension method.
   </tr>  
 
   <tr>
-    <td>toSet</td>
+    <td>zip</td>
     <td><a href="./src/ext/array/zip.ts">./src/ext/array/zip.ts</a></td>
     <td>Zip</td>
     <td>

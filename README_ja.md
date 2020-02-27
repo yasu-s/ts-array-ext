@@ -214,6 +214,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
        2 つのシーケンスの対応する要素に対して、1 つの指定した関数を適用し、結果として 1 つのシーケンスを生成します。
     </td>
   </tr>
+
+  <tr>
+    <td>trim</td>
+    <td><a href="./src/ext/array/trim.ts">./src/ext/array/trim.ts</a></td>
+    <td>-</td>
+    <td>
+      配列内の null or undefined を除去
+    </td>
+  </tr>
 </table>
 
 ## Map

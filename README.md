@@ -208,6 +208,15 @@ A sample collection of TypeScript 's Array extension method.
       Applies one specified function to corresponding elements of two sequences, producing one sequence as a result.
     </td>
   </tr>
+
+  <tr>
+    <td>trim</td>
+    <td><a href="./src/ext/array/trim.ts">./src/ext/array/trim.ts</a></td>
+    <td>-</td>
+    <td>
+      Remove null or undefined in array.
+    </td>
+  </tr>
 </table>
 
 ## Map

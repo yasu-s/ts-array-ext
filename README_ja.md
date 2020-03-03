@@ -223,6 +223,15 @@ TypeScriptの Array 拡張メソッドのサンプル集です。
       配列内の null or undefined を除去
     </td>
   </tr>
+
+  <tr>
+    <td>isDuplicate</td>
+    <td><a href="./src/ext/array/is-duplicate.ts">./src/ext/array/trim.ts</a></td>
+    <td>-</td>
+    <td>
+      対象のインデックスの値が重複しているか判定します。
+    </td>
+  </tr>
 </table>
 
 ## Map

@@ -7,32 +7,32 @@ declare global {
      * null or undefined or 空文字 の場合は true
      * @return null or undefined or 空文字 の場合は true
      */
-    isNillOrEmpty(value: string): boolean;
+    isNillOrEmpty(value: string | null | undefined): boolean;
 
     /**
      * [拡張メソッド]
      * null or undefined の場合は true
      * @return null or undefined の場合は true
      */
-    isNill(value: string): boolean;
+    isNill(value: string | null | undefined): boolean;
 
     /**
      * [拡張メソッド]
      * 空文字 の場合は true
      * @return 空文字 の場合は true
      */
-    isEmpty(value: string): boolean;
+    isEmpty(value: string | null | undefined): boolean;
   }
 }
 
-String.isNillOrEmpty  = function(value: string): boolean {
+String.isNillOrEmpty  = function(value: string | null | undefined): boolean {
   return !value;
 };
 
-String.isNill  = function(value: string): boolean {
+String.isNill  = function(value: string | null | undefined): boolean {
   return value === null || value === undefined;
 };
 
-String.isEmpty  = function(value: string): boolean {
+String.isEmpty  = function(value: string | null | undefined): boolean {
   return value === '';
 };

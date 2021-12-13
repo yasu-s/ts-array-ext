@@ -4,9 +4,9 @@ A sample collection of TypeScript 's Array extension method.
 
 # System requirements
 
-* Node.js 8.x
-* TypeScript 3.5.x  
-* jest 24.x (Unit Test)
+* Node.js 14.x
+* TypeScript 4.5.x  
+* jest 27.x (Unit Test)
 
 # Extension Method list
 

@@ -34,10 +34,13 @@ describe('Array.distinctBy', () => {
     ];
 
     // exercise
-    const actual = items.distinctBy(item => item.name);
+    const actual = items.distinctBy((item) => item.name);
 
     // verify
-    expect(actual).toEqual([{ id: 1, name: 'Alex' }, { id: 2, name: 'Bob' } ]);
+    expect(actual).toEqual([
+      { id: 1, name: 'Alex' },
+      { id: 2, name: 'Bob' },
+    ]);
   });
 
   it('number', () => {
@@ -49,10 +52,13 @@ describe('Array.distinctBy', () => {
     ];
 
     // exercise
-    const actual = items.distinctBy(item => item.id);
+    const actual = items.distinctBy((item) => item.id);
 
     // verify
-    expect(actual).toEqual([{ id: 1, name: 'Alex' }, { id: 2, name: 'Alex' } ]);
+    expect(actual).toEqual([
+      { id: 1, name: 'Alex' },
+      { id: 2, name: 'Alex' },
+    ]);
   });
 
   it('Array.length = 0', () => {
@@ -60,7 +66,7 @@ describe('Array.distinctBy', () => {
     const items = [] as number[];
 
     // exercise
-    const actual = items.distinctBy(item => item);
+    const actual = items.distinctBy((item) => item);
 
     // verify
     expect(actual).toEqual([]);

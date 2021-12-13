@@ -6,7 +6,7 @@ describe('Array.any', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.any(value => value === 2);
+    const actual = items.any((value) => value === 2);
 
     // verify
     expect(actual).toBeTruthy();
@@ -17,7 +17,7 @@ describe('Array.any', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.any(value => value === 4);
+    const actual = items.any((value) => value === 4);
 
     // verify
     expect(actual).toBeFalsy();

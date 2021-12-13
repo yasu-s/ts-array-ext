@@ -59,28 +59,28 @@ declare global {
   }
 }
 
-Array.prototype.select = function<T, U>(callbackfn: (value: T, index: number, array: T[]) => U): U[] {
+Array.prototype.select = function <T, U>(callbackfn: (value: T, index: number, array: T[]) => U): U[] {
   const items = this as T[];
   return items.map(callbackfn);
 };
 
-Array.prototype.where = function<T>(callbackfn: (value: T, index: number, array: T[]) => any): T[] {
+Array.prototype.where = function <T>(callbackfn: (value: T, index: number, array: T[]) => any): T[] {
   const items = this as T[];
   return items.filter(callbackfn);
 };
 
-Array.prototype.all = function<T>(callbackfn: (value: T, index: number, array: T[]) => boolean): boolean {
+Array.prototype.all = function <T>(callbackfn: (value: T, index: number, array: T[]) => boolean): boolean {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return false;
   return items.every(callbackfn);
 };
 
-Array.prototype.skip = function<T>(count: number): T[] {
+Array.prototype.skip = function <T>(count: number): T[] {
   const items = this as T[];
   return items.slice(count);
 };
 
-Array.prototype.take = function<T>(count: number): T[] {
+Array.prototype.take = function <T>(count: number): T[] {
   const items = this as T[];
   return items.slice(0, count);
 };

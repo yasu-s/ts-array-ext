@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-Array.prototype.whereNonNil = function<T>(): NonNullable<T>[] {
+Array.prototype.whereNonNil = function <T>(): NonNullable<T>[] {
   const items = this as T[];
   return items.filter((item): item is NonNullable<T> => item !== null && item !== undefined);
 };

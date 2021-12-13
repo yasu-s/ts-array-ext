@@ -1,0 +1,46 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project":"./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "arrowParens": "always"
+      }
+    ],
+    "eqeqeq": "error",
+    "prefer-template": "error",
+    "complexity": ["warn", 10],
+    "max-depth": ["warn", 3],
+    "max-statements": ["warn", 30],
+    "max-lines": ["warn"],
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme", "hack"], "location": "anywhere" }]
+  }
+}

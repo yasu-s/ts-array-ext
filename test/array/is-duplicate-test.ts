@@ -1,4 +1,4 @@
-import '../src/ext/array/is-duplicate';
+import '../../src/ext/array/is-duplicate';
 
 describe('Array.distinct', () => {
   it('duplicate', () => {

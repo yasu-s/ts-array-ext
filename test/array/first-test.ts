@@ -1,4 +1,4 @@
-import '../src/ext/array/first';
+import '../../src/ext/array/first';
 
 describe('Array.first', () => {
   it('Array.length > 0', () => {

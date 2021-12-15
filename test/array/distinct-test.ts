@@ -1,4 +1,4 @@
-import '../src/ext/array/distinct';
+import '../../src/ext/array/distinct';
 
 describe('Array.distinct', () => {
   it('Array.length > 0', () => {

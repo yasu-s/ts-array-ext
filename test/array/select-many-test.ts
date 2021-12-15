@@ -1,4 +1,4 @@
-import '../src/ext/array/select-many';
+import '../../src/ext/array/select-many';
 
 describe('Array.selectMany', () => {
   it('Array.length > 0', () => {

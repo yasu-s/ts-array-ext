@@ -1,4 +1,4 @@
-import '../src/ext/array/to-lookup';
+import '../../src/ext/array/to-lookup';
 
 class TestData {
   id = 0;

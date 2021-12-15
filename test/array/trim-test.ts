@@ -1,4 +1,4 @@
-import '../src/ext/array/trim';
+import '../../src/ext/array/trim';
 
 describe('Array.trim', () => {
   it('null', () => {

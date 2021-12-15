@@ -1,4 +1,4 @@
-import '../src/ext/array/to-map';
+import '../../src/ext/array/to-set';
 
 class TestData {
   id = 0;
@@ -6,7 +6,7 @@ class TestData {
   memo = '';
 }
 
-describe('Array.toMap', () => {
+describe('Array.toSet', () => {
   let testData: TestData[];
 
   beforeEach(() => {
@@ -33,31 +33,23 @@ describe('Array.toMap', () => {
     testData.push(d);
   });
 
-  it('key = id, value = name', () => {
+  it('key = id', () => {
     // exercise
-    const actual = testData.toMap(
-      (item) => item.id,
-      (item) => item.name,
-    );
+    const actual = testData.toSet((item) => item.id);
 
     // verify
     expect(actual.size).toBe(4);
     expect(actual.has(1)).toBeTruthy();
-    expect(actual.get(1)).toBe('Bob');
     expect(actual.has(100)).toBeFalsy();
   });
 
-  it('key = name, value = id', () => {
+  it('key = name', () => {
     // exercise
-    const actual = testData.toMap(
-      (item) => item.name,
-      (item) => item.id,
-    );
+    const actual = testData.toSet((item) => item.name);
 
     // verify
     expect(actual.size).toBe(3);
     expect(actual.has('Bob')).toBeTruthy();
-    expect(actual.get('Bob')).toBe(3);
     expect(actual.has('Bub')).toBeFalsy();
   });
 });

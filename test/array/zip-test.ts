@@ -1,4 +1,4 @@
-import '../src/ext/array/zip';
+import '../../src/ext/array/zip';
 
 describe('Array.zip', () => {
   it('ok', () => {

@@ -7,15 +7,15 @@ declare global {
      * Mapを配列に変換します
      * @return Map
      */
-    toArray(): Array<{ key: K, value: V }>;
+    toArray(): Array<{ key: K; value: V }>;
   }
 }
 
-Map.prototype.toArray = function<K, V>(): Array<{ key: K, value: V }> {
+Map.prototype.toArray = function <K, V>(): Array<{ key: K; value: V }> {
   const map = this as Map<K, V>;
   if (!map) return [];
 
-  const items = new Array<{ key: K, value: V }>();
+  const items = new Array<{ key: K; value: V }>();
   map.forEach((value, key) => {
     items.push({ key: key, value: value });
   });

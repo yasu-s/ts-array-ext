@@ -20,13 +20,13 @@ declare global {
   }
 }
 
-Array.prototype.last = function<T>() {
+Array.prototype.last = function <T>() {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return null;
   return items[items.length - 1];
 };
 
-Array.prototype.lastOrDefault = function<T>(defaultValue: T) {
+Array.prototype.lastOrDefault = function <T>(defaultValue: T) {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return defaultValue;
   return items[items.length - 1];

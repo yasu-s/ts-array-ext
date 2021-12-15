@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-Array.prototype.equalTo = function<T>(target: T[]) {
+Array.prototype.equalTo = function <T>(target: T[]) {
   const items = this as T[];
   if (!Array.isArray(items) || !Array.isArray(target)) return false;
   // JSON文字列化して比較

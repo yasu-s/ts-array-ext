@@ -6,7 +6,7 @@ describe('Array.select', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.select(item => item + 3);
+    const actual = items.select((item) => item + 3);
 
     // verify
     expect(actual).toEqual([4, 5, 6]);
@@ -17,7 +17,7 @@ describe('Array.select', () => {
     const items = [] as number[];
 
     // exercise
-    const actual = items.select(item => item + 3);
+    const actual = items.select((item) => item + 3);
 
     // verify
     expect(actual).toEqual([]);
@@ -30,7 +30,7 @@ describe('Array.where', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.where(item => item > 1);
+    const actual = items.where((item) => item > 1);
 
     // verify
     expect(actual).toEqual([2, 3]);
@@ -41,7 +41,7 @@ describe('Array.where', () => {
     const items = [] as number[];
 
     // exercise
-    const actual = items.where(item => item > 1);
+    const actual = items.where((item) => item > 1);
 
     // verify
     expect(actual).toEqual([]);
@@ -54,7 +54,7 @@ describe('Array.all', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.all(item => item > 0);
+    const actual = items.all((item) => item > 0);
 
     // verify
     expect(actual).toBeTruthy();
@@ -65,7 +65,7 @@ describe('Array.all', () => {
     const items = [1, 2, 3];
 
     // exercise
-    const actual = items.all(item => item > 1);
+    const actual = items.all((item) => item > 1);
 
     // verify
     expect(actual).toBeFalsy();
@@ -76,7 +76,7 @@ describe('Array.all', () => {
     const items = [] as number[];
 
     // exercise
-    const actual = items.all(item => item > 1);
+    const actual = items.all((item) => item > 1);
 
     // verify
     expect(actual).toBeFalsy();

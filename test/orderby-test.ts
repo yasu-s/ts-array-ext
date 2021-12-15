@@ -46,7 +46,7 @@ describe('Array.orderby', () => {
 
   it('sortKeys = TestData.id', () => {
     // exercise
-    const actual = testData.orderBy(d => d.id);
+    const actual = testData.orderBy((d) => d.id);
 
     // verify
     expect(actual[0].id).toBe(1);
@@ -57,7 +57,7 @@ describe('Array.orderby', () => {
 
   it('sortKeys = TestData.name', () => {
     // exercise
-    const actual = testData.orderBy(d => d.name);
+    const actual = testData.orderBy((d) => d.name);
 
     // verify
     expect(actual[0].name).toBe('Alex');
@@ -68,7 +68,10 @@ describe('Array.orderby', () => {
 
   it('sortKeys = TestData.name, TestData.id', () => {
     // exercise
-    const actual = testData.orderBy(d => d.name, d => d.id);
+    const actual = testData.orderBy(
+      (d) => d.name,
+      (d) => d.id,
+    );
 
     // verify
     expect(actual[0].id).toBe(4);
@@ -90,7 +93,7 @@ describe('Array.orderby', () => {
 
   it('sortKeys = { sortFn, asc: false }', () => {
     // exercise
-    const actual = testData.orderBy({ sortFn: d => d.name, asc: false });
+    const actual = testData.orderBy({ sortFn: (d) => d.name, asc: false });
 
     // verify
     expect(actual[0].name).toBe('Char');
@@ -101,7 +104,7 @@ describe('Array.orderby', () => {
 
   it('sortKeys = { sortFn, asc: true }, { sortFn, asc: false }', () => {
     // exercise
-    const actual = testData.orderBy({ sortFn: d => d.name, asc: true }, { sortFn: d => d.id, asc: false });
+    const actual = testData.orderBy({ sortFn: (d) => d.name, asc: true }, { sortFn: (d) => d.id, asc: false });
 
     // verify
     expect(actual[0].id).toBe(4);

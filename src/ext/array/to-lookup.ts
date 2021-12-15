@@ -13,9 +13,11 @@ declare global {
   }
 }
 
-Array.prototype.toLookup = function<T, K, V>(keyFn: (value: T) => K, valueFn: (value: T) => V): Map<K, V[]> {
+Array.prototype.toLookup = function <T, K, V>(keyFn: (value: T) => K, valueFn: (value: T) => V): Map<K, V[]> {
   const items = this as T[];
-  const convItems = items.map(item => { return { key: keyFn(item), value: valueFn(item) }; });
+  const convItems = items.map((item) => {
+    return { key: keyFn(item), value: valueFn(item) };
+  });
 
   const map = new Map<K, V[]>();
   for (const item of convItems) {
@@ -23,8 +25,7 @@ Array.prototype.toLookup = function<T, K, V>(keyFn: (value: T) => K, valueFn: (v
       const values = map.get(item.key) as V[];
       values.push(item.value);
       map.set(item.key, values);
-    } else
-      map.set(item.key, [item.value]);
+    } else map.set(item.key, [item.value]);
   }
 
   return map;

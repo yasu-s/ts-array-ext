@@ -13,12 +13,10 @@ declare global {
   }
 }
 
-Array.prototype.any = function<T>(callbackfn?: (value: T, index: number, array: T[]) => boolean) {
+Array.prototype.any = function <T>(callbackfn?: (value: T, index: number, array: T[]) => boolean) {
   const items = this as T[];
   if (!Array.isArray(items)) return false;
 
-  if (callbackfn)
-    return items.some(callbackfn);
-  else
-    return items.length > 0;
+  if (callbackfn) return items.some(callbackfn);
+  else return items.length > 0;
 };

@@ -11,6 +11,6 @@ declare global {
   }
 }
 
-Boolean.prototype.toggle = function(): boolean {
+Boolean.prototype.toggle = function (): boolean {
   return !(<boolean>this);
 };

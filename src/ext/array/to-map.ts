@@ -13,14 +13,15 @@ declare global {
   }
 }
 
-Array.prototype.toMap = function<T, K, V>(keyFn: (value: T) => K, valueFn: (value: T) => V): Map<K, V> {
+Array.prototype.toMap = function <T, K, V>(keyFn: (value: T) => K, valueFn: (value: T) => V): Map<K, V> {
   const items = this as T[];
-  const convItems = items.map(item => { return { key: keyFn(item), value: valueFn(item) }; });
+  const convItems = items.map((item) => {
+    return { key: keyFn(item), value: valueFn(item) };
+  });
 
   const map = new Map<K, V>();
   for (const item of convItems) {
-    if (!map.has(item.key))
-      map.set(item.key, item.value);
+    if (!map.has(item.key)) map.set(item.key, item.value);
   }
 
   return map;

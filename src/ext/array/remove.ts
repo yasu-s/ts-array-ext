@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-Array.prototype.remove = function<T>(target: T) {
+Array.prototype.remove = function <T>(target: T) {
   const items = this as T[];
   if (target === null || target === undefined) {
     return;
@@ -30,7 +30,7 @@ Array.prototype.remove = function<T>(target: T) {
   items.splice(index, 1);
 };
 
-Array.prototype.removeAt = function<T>(index: number) {
+Array.prototype.removeAt = function <T>(index: number) {
   const items = this as T[];
   if (index < 0 || items.length <= index) {
     return;

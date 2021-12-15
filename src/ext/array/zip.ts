@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-Array.prototype.zip = function<T, TSecond, TResult>(second: TSecond[], fn: (first: T, second: TSecond) => TResult) {
+Array.prototype.zip = function <T, TSecond, TResult>(second: TSecond[], fn: (first: T, second: TSecond) => TResult) {
   if (!Array.isArray(second) || !fn) {
     return [];
   }

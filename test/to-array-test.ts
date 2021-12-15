@@ -4,8 +4,8 @@ describe('Map.toArray', () => {
   it('key = number, value = string', () => {
     // setup
     const map = new Map<number, string>([
-      [ 1, 'Alex' ],
-      [ 2, 'Bob' ]
+      [1, 'Alex'],
+      [2, 'Bob'],
     ]);
 
     // exercise

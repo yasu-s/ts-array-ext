@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-Array.prototype.selectMany = function<T, U>(callbackfn: (value: T, index: number, array: T[]) => U[]): U[] {
+Array.prototype.selectMany = function <T, U>(callbackfn: (value: T, index: number, array: T[]) => U[]): U[] {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return [];
 

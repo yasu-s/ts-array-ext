@@ -22,7 +22,7 @@ declare global {
      * @param callbackfn 抽出条件
      * @return 抽出後の配列
      */
-    where(callbackfn: (value: T, index: number, array: T[]) => any): T[];
+    where(callbackfn: (value: T, index: number, array: T[]) => unknown): T[];
 
     /**
      * [拡張メソッド]
@@ -64,7 +64,7 @@ Array.prototype.select = function <T, U>(callbackfn: (value: T, index: number, a
   return items.map(callbackfn);
 };
 
-Array.prototype.where = function <T>(callbackfn: (value: T, index: number, array: T[]) => any): T[] {
+Array.prototype.where = function <T>(callbackfn: (value: T, index: number, array: T[]) => unknown): T[] {
   const items = this as T[];
   return items.filter(callbackfn);
 };

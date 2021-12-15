@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-Array.prototype.isDuplicate  = function<T>(index: number): boolean {
+Array.prototype.isDuplicate = function <T>(index: number): boolean {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0 || index < 0 || items.length <= index) return false;
   return items.some((item, i) => i !== index && items[index] === item);

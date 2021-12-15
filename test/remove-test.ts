@@ -23,7 +23,6 @@ describe('Array.remove', () => {
     expect(items).toEqual([1, 2, 3]);
   });
 
-
   it('target = null', () => {
     // setup
     const items = [1, 2, 3];

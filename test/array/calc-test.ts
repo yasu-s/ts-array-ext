@@ -1,4 +1,4 @@
-import '../src/ext/array/calc';
+import '../../src/ext/array/calc';
 
 describe('Array.sum', () => {
   it('Array.length > 0', () => {

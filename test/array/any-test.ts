@@ -1,4 +1,4 @@
-import '../src/ext/array/any';
+import '../../src/ext/array/any';
 
 describe('Array.any', () => {
   it('callbackfn = true', () => {

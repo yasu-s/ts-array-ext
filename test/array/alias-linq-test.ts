@@ -1,4 +1,4 @@
-import '../src/ext/array/alias-linq';
+import '../../src/ext/array/alias-linq';
 
 describe('Array.select', () => {
   it('Array.length > 0', () => {

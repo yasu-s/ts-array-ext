@@ -1,4 +1,4 @@
-import '../src/ext/boolean/toggle';
+import '../../src/ext/boolean/toggle';
 
 describe('Boolean.toggle', () => {
   it('true -> false', () => {

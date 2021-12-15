@@ -1,5 +1,5 @@
-import '../src/ext/array/deep-copy';
-import '../src/ext/object/deep-copy';
+import '../../src/ext/array/deep-copy';
+import '../../src/ext/object/deep-copy';
 
 describe('Array.deepCopy', () => {
   it('number array', () => {

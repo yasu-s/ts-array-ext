@@ -1,5 +1,5 @@
-import '../src/ext/array/equal-to';
-import '../src/ext/object/equal-to';
+import '../../src/ext/array/equal-to';
+import '../../src/ext/object/equal-to';
 
 describe('Array.equalTo', () => {
   describe('number array', () => {

@@ -1,4 +1,4 @@
-import '../src/ext/map/to-array';
+import '../../src/ext/map/to-array';
 
 describe('Map.toArray', () => {
   it('key = number, value = string', () => {

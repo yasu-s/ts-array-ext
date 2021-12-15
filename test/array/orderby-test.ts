@@ -1,4 +1,4 @@
-import '../src/ext/array/orderby';
+import '../../src/ext/array/orderby';
 
 class TestData {
   id = 0;

@@ -1,4 +1,4 @@
-import '../src/ext/array/remove';
+import '../../src/ext/array/remove';
 
 describe('Array.remove', () => {
   it('ok', () => {

@@ -1,4 +1,4 @@
-import '../src/ext/array/last';
+import '../../src/ext/array/last';
 
 describe('Array.last', () => {
   it('Array.length > 0', () => {

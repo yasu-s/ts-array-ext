@@ -23,6 +23,7 @@
     "test": "jest",
     "test:w": "jest --watch",
     "test:wa": "jest --watchAll",
+    "test:ci": "jest --runInBand --coverage --ci",
     "lint": "eslint src --ext .ts"
   },
   "main": "dist/index.js",

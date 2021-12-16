@@ -1,47 +1,16 @@
 import '../../src/ext/array/trim';
 
 describe('Array.trim', () => {
-  it('null', () => {
-    // setup
-    const items = [1, null, 3];
-
+  it.each([
+    { case: 'null', items: [1, null, 3], expected: [1, 3] },
+    { case: 'undefined', items: [1, undefined, 3], expected: [1, 3] },
+    { case: 'null or undefined nothing', items: [1, 2, 3], expected: [1, 2, 3] },
+    { case: 'Array.length = 0', items: [], expected: [] },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.trim();
 
     // verify
-    expect(actual).toEqual([1, 3]);
-  });
-
-  it('undefined', () => {
-    // setup
-    const items = [1, undefined, 3];
-
-    // exercise
-    const actual = items.trim();
-
-    // verify
-    expect(actual).toEqual([1, 3]);
-  });
-
-  it('null or undefined nothing', () => {
-    // setup
-    const items = [1, 2, 3];
-
-    // exercise
-    const actual = items.trim();
-
-    // verify
-    expect(actual).toEqual([1, 2, 3]);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.trim();
-
-    // verify
-    expect(actual).toEqual([]);
+    expect(actual).toEqual(expected);
   });
 });

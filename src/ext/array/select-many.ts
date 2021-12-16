@@ -16,5 +16,5 @@ Array.prototype.selectMany = function <T, U>(callbackfn: (value: T, index: numbe
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return [];
 
-  return items.map(callbackfn).reduce((prev, current) => prev.concat(current));
+  return items.map(callbackfn).flat();
 };

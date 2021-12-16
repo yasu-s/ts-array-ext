@@ -1,97 +1,53 @@
 import '../../src/ext/array/calc';
 
 describe('Array.sum', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 6 },
+    { case: 'Array.length = 0', items: [], expected: 0 },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.sum();
 
     // verify
-    expect(actual).toBe(6);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.sum();
-
-    // verify
-    expect(actual).toBe(0);
+    expect(actual).toBe(expected);
   });
 });
 
 describe('Array.average', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 2 },
+    { case: 'Array.length = 0', items: [], expected: 0 },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.average();
 
     // verify
-    expect(actual).toBe(2);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.average();
-
-    // verify
-    expect(actual).toBe(0);
+    expect(actual).toBe(expected);
   });
 });
 
 describe('Array.max', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 3 },
+    { case: 'Array.length = 0', items: [], expected: 0 },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.max();
 
     // verify
-    expect(actual).toBe(3);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.max();
-
-    // verify
-    expect(actual).toBe(0);
+    expect(actual).toBe(expected);
   });
 });
 
 describe('Array.min', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 1 },
+    { case: 'Array.length = 0', items: [], expected: 0 },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.min();
 
     // verify
-    expect(actual).toBe(1);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.min();
-
-    // verify
-    expect(actual).toBe(0);
+    expect(actual).toBe(expected);
   });
 });

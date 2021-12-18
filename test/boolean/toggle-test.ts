@@ -1,25 +1,14 @@
 import '../../src/ext/boolean/toggle';
 
 describe('Boolean.toggle', () => {
-  it('true -> false', () => {
-    // setup
-    const target = true;
-
+  it.each([
+    { case: 'true -> false', target: true, expected: false },
+    { case: 'false -> true', target: false, expected: true },
+  ])('$case', ({ target, expected }) => {
     // exercise
     const actual = target.toggle();
 
     // verify
-    expect(actual).toBeFalsy();
-  });
-
-  it('false -> true', () => {
-    // setup
-    const target = false;
-
-    // exercise
-    const actual = target.toggle();
-
-    // verify
-    expect(actual).toBeTruthy();
+    expect(actual).toBe(expected);
   });
 });

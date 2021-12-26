@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-Array.prototype.deepCopy = function<T>() {
+Array.prototype.deepCopy = function <T>() {
   const items = this as T[];
   if (!Array.isArray(items)) return [];
   const json = JSON.stringify(items);

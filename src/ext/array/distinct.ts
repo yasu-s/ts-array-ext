@@ -19,16 +19,16 @@ declare global {
   }
 }
 
-Array.prototype.distinct = function<T>(): T[] {
+Array.prototype.distinct = function <T>(): T[] {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return [];
   return items.filter((item, index, array) => array.indexOf(item) === index);
 };
 
-Array.prototype.distinctBy = function<T, K>(keySelector?: (obj: T) => K): T[] {
+Array.prototype.distinctBy = function <T, K>(keySelector?: (obj: T) => K): T[] {
   const items = this as T[];
   if (!Array.isArray(items) || items.length === 0) return [];
   if (!keySelector) return items.distinct();
-  const keys = items.map(item => keySelector(item));
+  const keys = items.map((item) => keySelector(item));
   return items.filter((item, index) => keys.indexOf(keySelector(item)) === index);
-}
+};

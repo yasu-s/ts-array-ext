@@ -1,26 +1,15 @@
 import '../../src/ext/array/distinct';
 
 describe('Array.distinct', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, '1', 1, '2', '1'];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, '1', 1, '2', '1'], expected: [1, 2, '1', '2'] },
+    { case: 'Array.length = 0', items: [], expected: [] },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.distinct();
 
     // verify
-    expect(actual).toEqual([1, 2, '1', '2']);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.distinct();
-
-    // verify
-    expect(actual).toEqual([]);
+    expect(actual).toEqual(expected);
   });
 });
 

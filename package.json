@@ -47,6 +47,7 @@
     "testMatch": [
       "**/test/**/*.+(ts|tsx|js)"
     ],
-    "resetMocks": true
+    "resetMocks": true,
+    "testTimeout": 100
   }
 }

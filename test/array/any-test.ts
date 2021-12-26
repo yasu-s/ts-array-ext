@@ -1,47 +1,25 @@
 import '../../src/ext/array/any';
 
 describe('Array.any', () => {
-  it('callbackfn = true', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'callbackfn = true', items: [1, 2, 3], expected: true },
+    { case: 'callbackfn = false', items: [1, 3], expected: false },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.any((value) => value === 2);
 
     // verify
-    expect(actual).toBeTruthy();
+    expect(actual).toBe(expected);
   });
 
-  it('callbackfn = false', () => {
-    // setup
-    const items = [1, 2, 3];
-
-    // exercise
-    const actual = items.any((value) => value === 4);
-
-    // verify
-    expect(actual).toBeFalsy();
-  });
-
-  it('callbackfn = null, array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'callbackfn = null, array.length > 0', items: [1, 2, 3], expected: true },
+    { case: 'callbackfn = null, array.length = 0', items: [], expected: false },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.any();
 
     // verify
-    expect(actual).toBeTruthy();
-  });
-
-  it('callbackfn = null, array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.any();
-
-    // verify
-    expect(actual).toBeFalsy();
+    expect(actual).toBe(expected);
   });
 });

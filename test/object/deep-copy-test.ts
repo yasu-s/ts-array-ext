@@ -1,27 +1,15 @@
 import '../../src/ext/object/deep-copy';
 
 describe('Object.deepCopy', () => {
-  it('object', () => {
-    // setup
-    const obj = { id: 1, name: 'hoge' };
-
+  it.each([
+    { case: 'object', obj: { id: 1, name: 'hoge' }, expected: { id: 1, name: 'hoge' } },
+    { case: 'nested object', obj: { data: [{ id: 1, name: 'hoge' }] }, expected: { data: [{ id: 1, name: 'hoge' }] } },
+  ])('$case', ({ obj, expected }) => {
     // exercise
     const actual = obj.deepCopy();
 
     // verify
     expect(actual).not.toBe(obj);
-    expect(actual).toEqual({ id: 1, name: 'hoge' });
-  });
-
-  it('nested object', () => {
-    // setup
-    const obj = { data: [{ id: 1, name: 'hoge' }] };
-
-    // exercise
-    const actual = obj.deepCopy();
-
-    // verify
-    expect(actual).not.toBe(obj);
-    expect(actual).toEqual({ data: [{ id: 1, name: 'hoge' }] });
+    expect(actual).toEqual(expected);
   });
 });

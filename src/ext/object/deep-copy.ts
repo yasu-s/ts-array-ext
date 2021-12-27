@@ -7,11 +7,11 @@ declare global {
      * Object をディープコピーします。
      * @return コピー後のオブジェクト
      */
-    deepCopy<T = any>(): T;
+    deepCopy<T = object>(): T;
   }
 }
 
-Object.prototype.deepCopy = function <T = any>(): T {
+Object.prototype.deepCopy = function <T = object>(): T {
   const json = JSON.stringify(this);
   return JSON.parse(json) as T;
 };

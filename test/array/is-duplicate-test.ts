@@ -28,7 +28,7 @@ describe('Array.distinct', () => {
   it('items.length = 0', () => {
     // setup
     const index = 0;
-    const items = [] as any[];
+    const items = [] as number[];
 
     // exercise
     const actual = items.isDuplicate(index);

@@ -11,7 +11,10 @@ declare global {
   }
 }
 
-Array.prototype.trim = function <T>() {
-  const items = this as T[];
-  return items.filter((item): item is NonNullable<T> => item !== null && item !== undefined);
-};
+Object.defineProperty(Array.prototype, 'trim', {
+  writable: false,
+  value: function <T>() {
+    const items = this as T[];
+    return items.filter((item): item is NonNullable<T> => item !== null && item !== undefined);
+  },
+});

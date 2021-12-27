@@ -5,10 +5,11 @@ declare global {
     /**
      * [拡張メソッド]
      * 配列をSetに変換します
+     * @template K keyの型情報
      * @param keyFn
      * @return Set
      */
-    toSet<K, V>(keyFn: (value: T) => K): Set<K>;
+    toSet<K>(keyFn: (value: T) => K): Set<K>;
   }
 }
 

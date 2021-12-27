@@ -1,37 +1,12 @@
 import '../../src/ext/array/orderby';
 
-class TestData {
-  id = 0;
-  name = '';
-  memo = '';
-}
-
 describe('Array.orderby', () => {
-  let testData: TestData[];
-
-  beforeEach(() => {
-    testData = new Array<TestData>();
-
-    let d = new TestData();
-    d.id = 3;
-    d.name = 'Bob';
-    testData.push(d);
-
-    d = new TestData();
-    d.id = 2;
-    d.name = 'Char';
-    testData.push(d);
-
-    d = new TestData();
-    d.id = 4;
-    d.name = 'Alex';
-    testData.push(d);
-
-    d = new TestData();
-    d.id = 1;
-    d.name = 'Bob';
-    testData.push(d);
-  });
+  const testData = [
+    { id: 3, name: 'Bob' },
+    { id: 2, name: 'Char' },
+    { id: 4, name: 'Alex' },
+    { id: 1, name: 'Bob' },
+  ];
 
   it('sortKeys = null', () => {
     // setup

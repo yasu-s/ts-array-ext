@@ -11,8 +11,7 @@ declare global {
   }
 }
 
-Object.prototype.deepCopy = function<T = any>(): T {
-  const obj = this;
-  const json = JSON.stringify(obj);
+Object.prototype.deepCopy = function <T = any>(): T {
+  const json = JSON.stringify(this);
   return JSON.parse(json) as T;
 };

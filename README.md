@@ -1,3 +1,5 @@
+[![CI-test](https://github.com/yasu-s/ts-array-ext/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/yasu-s/ts-array-ext/actions/workflows/main.yml)
+
 # Overview
 
 A sample collection of TypeScript 's Array extension method.

@@ -22,28 +22,6 @@ describe('Array.remove', () => {
     // verify
     expect(items).toEqual([1, 2, 3]);
   });
-
-  it('target = null', () => {
-    // setup
-    const items = [1, 2, 3];
-
-    // exercise
-    items.remove(null as any);
-
-    // verify
-    expect(items).toEqual([1, 2, 3]);
-  });
-
-  it('target = undefined', () => {
-    // setup
-    const items = [1, 2, 3];
-
-    // exercise
-    items.remove(undefined as any);
-
-    // verify
-    expect(items).toEqual([1, 2, 3]);
-  });
 });
 
 describe('Array.removeAt', () => {

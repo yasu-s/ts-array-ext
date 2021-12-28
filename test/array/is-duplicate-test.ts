@@ -1,63 +1,17 @@
 import '../../src/ext/array/is-duplicate';
 
 describe('Array.distinct', () => {
-  it('duplicate', () => {
-    // setup
-    const index = 0;
-    const items = [1, 2, '1', 1, '2', '1'];
-
+  it.each([
+    { case: 'duplicate', index: 0, items: [1, 2, '1', 1, '2', '1'], expected: true },
+    { case: 'no duplicate', index: 1, items: [1, 2, '1', 1, '2', '1'], expected: false },
+    { case: 'items.length = 0', index: 0, items: [], expected: false },
+    { case: 'index < 0', index: -1, items: [1, 2, 1], expected: false },
+    { case: 'items.length <= index', index: 3, items: [1, 2, 1], expected: false },
+  ])('$case', ({ index, items, expected }) => {
     // exercise
     const actual = items.isDuplicate(index);
 
     // verify
-    expect(actual).toBeTruthy();
-  });
-
-  it('no duplicate', () => {
-    // setup
-    const index = 1;
-    const items = [1, 2, '1', 1, '2', '1'];
-
-    // exercise
-    const actual = items.isDuplicate(index);
-
-    // verify
-    expect(actual).toBeFalsy();
-  });
-
-  it('items.length = 0', () => {
-    // setup
-    const index = 0;
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.isDuplicate(index);
-
-    // verify
-    expect(actual).toBeFalsy();
-  });
-
-  it('items.length < 0', () => {
-    // setup
-    const index = -1;
-    const items = [1, 2, 1];
-
-    // exercise
-    const actual = items.isDuplicate(index);
-
-    // verify
-    expect(actual).toBeFalsy();
-  });
-
-  it('items.length <= index', () => {
-    // setup
-    const index = 3;
-    const items = [1, 2, 1];
-
-    // exercise
-    const actual = items.isDuplicate(index);
-
-    // verify
-    expect(actual).toBeFalsy();
+    expect(actual).toBe(expected);
   });
 });

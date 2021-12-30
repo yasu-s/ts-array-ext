@@ -1,49 +1,27 @@
 import '../../src/ext/array/last';
 
 describe('Array.last', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 3 },
+    { case: 'Array.length = 0', items: [], expected: null },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.last();
 
     // verify
-    expect(actual).toBe(3);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.last();
-
-    // verify
-    expect(actual).toBeNull();
+    expect(actual).toBe(expected);
   });
 });
 
 describe('Array.lastOrDefault', () => {
-  it('Array.length > 0', () => {
-    // setup
-    const items = [1, 2, 3];
-
+  it.each([
+    { case: 'Array.length > 0', items: [1, 2, 3], expected: 3 },
+    { case: 'Array.length = 0', items: [], expected: 0 },
+  ])('$case', ({ items, expected }) => {
     // exercise
     const actual = items.lastOrDefault(0);
 
     // verify
-    expect(actual).toBe(3);
-  });
-
-  it('Array.length = 0', () => {
-    // setup
-    const items = [] as number[];
-
-    // exercise
-    const actual = items.lastOrDefault(0);
-
-    // verify
-    expect(actual).toBe(0);
+    expect(actual).toBe(expected);
   });
 });

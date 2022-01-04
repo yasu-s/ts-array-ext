@@ -6,7 +6,7 @@ describe('Object.deepCopy', () => {
     { case: 'nested object', obj: { data: [{ id: 1, name: 'hoge' }] }, expected: { data: [{ id: 1, name: 'hoge' }] } },
   ])('$case', ({ obj, expected }) => {
     // exercise
-    const actual = obj.deepCopy();
+    const actual = obj.deepCopy<{ id: number; name: string }>();
 
     // verify
     expect(actual).not.toBe(obj);

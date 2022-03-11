@@ -13,6 +13,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.4.4",
+    "jest-junit": "^13.0.0",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",
     "typescript": "^4.5.3"
@@ -23,7 +24,7 @@
     "test": "jest",
     "test:w": "jest --watch",
     "test:wa": "jest --watchAll",
-    "test:ci": "jest --runInBand --coverage --ci",
+    "test:ci": "jest --runInBand --coverage --ci --reporters=default --reporters=jest-junit",
     "lint": "eslint src --ext .ts"
   },
   "main": "dist/index.js",
@@ -49,5 +50,14 @@
     ],
     "resetMocks": true,
     "testTimeout": 100
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "jest-junit.xml",
+    "ancestorSeparator": " › ",
+    "uniqueOutputName": "false",
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
   }
 }
